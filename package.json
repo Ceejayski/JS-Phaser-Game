@@ -1,0 +1,53 @@
+{
+  "name": "js-phaser-game",
+  "description": "This is a Javascript Phaser Game in 2D.",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack --mode development --watch *.js",
+    "test-watch": "jest --watch *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ceejayski/JS-Phaser-Game.git"
+  },
+  "author": "Ceejayski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ceejayski/JS-Phaser-Game/issues"
+  },
+  "homepage": "https://github.com/Ceejayski/JS-Phaser-Game#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^5.2.1",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^27.0.1",
+    "jest-localstorage-mock": "^2.4.13",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.19.0",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0",
+    "@babel/preset-env": "^7.14.2",
+    "babel-jest": "^27.0.1",
+    "ts-jest": "^27.0.1"
+  },
+  "dependencies": {
+    "moment": "^2.29.1"
+  },
+  "jest": {
+    "resetMocks": false,
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
+  }
+}
