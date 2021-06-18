@@ -11,8 +11,8 @@ beforeEach(() => {
 
 test('postScores resolves successfully', () => {
   postScores(url)
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       expect(data.result).toEqual('Leaderboard score created correctly.');
     });
 });

@@ -106,7 +106,7 @@ export default class MenuScene extends Phaser.Scene {
       this.backgroundmusic.stop();
       this.scene.start('game', { mute: !this.checkmark.visible });
     });
-    // Leaderboard 
+    // Leaderboard
     const leaderboard = this.add.image(400, 450, 'leader').setScale(0.7);
 
     leaderboard.setInteractive({ useHandCursor: true });
