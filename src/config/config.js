@@ -1,7 +1,6 @@
 import Phaser from 'phaser';
 import { scenes } from '../scene/Scenes';
 
-// eslint-disable-next-line import/prefer-default-export
 export const config = {
   type: Phaser.AUTO,
   width: 800,
