@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/Ceejayski/JS-Phaser-Game#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.17",
     "@babel/preset-env": "^7.14.2",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.0.1",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.1",
     "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -45,11 +47,15 @@
   },
   "dependencies": {
     "moment": "^2.29.1",
+    "node-modules": "^0.0.1",
     "phaser": "^3.55.2"
   },
   "jest": {
     "setupFiles": [
       "jest-canvas-mock"
     ]
+  },
+  "directories": {
+    "test": "tests"
   }
 }

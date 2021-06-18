@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import Phaser from 'phaser';
 import GameOver from '../src/scene/gameover';
 

@@ -1,5 +1,8 @@
+/**
+ * @jest-environment jsdom
+ */
 import Phaser from 'phaser';
-import StaticKiller from '../src/lib/staticKiller';
+import StaticKiller from '../src/lib/statickiller';
 
 test('StaticKiller is a function', () => {
   expect(typeof StaticKiller).toBe('function');

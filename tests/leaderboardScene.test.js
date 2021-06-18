@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import Phaser from 'phaser';
 import LeaderBoardScene from '../src/scene/leaderboard';
 

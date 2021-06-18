@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import Phaser from 'phaser';
 import Coin from '../src/lib/stars';
 
