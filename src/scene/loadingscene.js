@@ -48,7 +48,7 @@ export default class LoadingScene extends Phaser.Scene {
     assetText.setOrigin(0.5, 0.5);
 
     this.load.on('progress', (value) => {
-      percentText.setText(`${parseInt(value * 100)}%`);
+      percentText.setText(`${parseInt(value * 100, 10)}%`);
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
       progressBar.fillRect(250, 280, 300 * value, 30);
@@ -71,6 +71,7 @@ export default class LoadingScene extends Phaser.Scene {
     this.load.image('menubg', 'assets/images/menubg.jpg');
     this.load.image('gamelogo', 'assets/img/game.png');
     this.load.image('playbtn', 'assets/img/playbtn.png');
+    this.load.image('leader', 'assets/img/leader.png');
     this.load.image('optionbtn', 'assets/img/optionbtn.png');
     this.load.image('menu', 'assets/img/menu.png');
     this.load.image('restart', 'assets/img/restart.png');
@@ -103,7 +104,7 @@ export default class LoadingScene extends Phaser.Scene {
     this.load.spritesheet('dude',
       'assets/img/dude.png',
       { frameWidth: 32, frameHeight: 48 });
-    for (let i = 0; i < 140; i++) {
+    for (let i = 0; i < 40; i += 1) {
       this.load.image(`logo${i}`, 'assets/img/logo.png');
     }
   }

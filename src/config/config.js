@@ -7,7 +7,7 @@ export const config = {
   width: 800,
   height: 600,
   scene: scenes,
-  title: 'Monster Kong',
+  title: 'Brave Dude',
   pixelArt: false,
   physics: {
     default: 'arcade',
@@ -15,7 +15,7 @@ export const config = {
       gravity: {
         y: 20,
       },
-      debug: true,
+      debug: false,
     },
   },
   parent: '#container',

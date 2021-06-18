@@ -173,7 +173,6 @@ export default class GameScene extends Phaser.Scene {
   addStaticKillerAbove(sprite) {
     const y = sprite.y - sprite.displayHeight;
     const staticKiller = this.staticKillers.get(Phaser.Math.Between(sprite.x + 60, sprite.x + 110), y, 'spikes');
-    console.log(sprite.x + 130);
     staticKiller.setActive(true);
     staticKiller.setVisible(true);
     this.add.existing(staticKiller);

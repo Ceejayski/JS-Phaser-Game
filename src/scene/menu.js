@@ -99,15 +99,23 @@ export default class MenuScene extends Phaser.Scene {
 
     // play btn actions
 
-    const playbtn = this.add.image(400, 400, 'playbtn').setScale(0.7);
+    const playbtn = this.add.image(400, 350, 'playbtn').setScale(0.7);
 
     playbtn.setInteractive({ useHandCursor: true });
     playbtn.on('pointerdown', () => {
       this.backgroundmusic.stop();
       this.scene.start('game', { mute: !this.checkmark.visible });
     });
+    // Leaderboard 
+    const leaderboard = this.add.image(400, 450, 'leader').setScale(0.7);
+
+    leaderboard.setInteractive({ useHandCursor: true });
+    leaderboard.on('pointerdown', () => {
+      this.backgroundmusic.stop();
+      this.scene.start('leaderboard');
+    });
     // optionbtn
-    const optionbtn = this.add.image(400, 500, 'optionbtn').setScale(0.7);
+    const optionbtn = this.add.image(400, 550, 'optionbtn').setScale(0.7);
 
     // created by text
     this.add.text(500, 550, 'Created by: Ceejayski', {
