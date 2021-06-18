@@ -1,8 +1,7 @@
 import Phaser from 'phaser';
-import { scenes } from '../scene/Scenes';
+import scenes from '../scene/Scenes';
 
-// eslint-disable-next-line import/prefer-default-export
-export const config = {
+const config = {
   type: Phaser.AUTO,
   width: 800,
   height: 600,
@@ -25,3 +24,5 @@ export const config = {
 
   autoCenter: true,
 };
+
+export default config;

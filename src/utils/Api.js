@@ -1,4 +1,3 @@
-// { "result": "Game with ID: v42vFPBrTwKTd2VRvG26 added."}
 export const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/v42vFPBrTwKTd2VRvG26/scores';
 
 const handleErrors = (response) => {

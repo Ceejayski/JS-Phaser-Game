@@ -81,10 +81,9 @@ export default class GameScene extends Phaser.Scene {
       child.body.immovable = true;
       const me = this;
 
-      // eslint-disable-next-line func-names
-      child.update = function () {
-        if (this.y > 600) {
-          this.y = 0;
+      child.update = () => {
+        if (child.y > 600) {
+          child.y = 0;
           const obstacle = Phaser.Math.Between(5, 9);
           me.incrementScore();
           me.addStarAbove(child);
