@@ -1,2 +1,5 @@
 import './style.scss';
-console.log('hello')
+import Phaser from 'phaser';
+import { config } from './config/config';
+
+const game = new Phaser.Game(config);

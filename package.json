@@ -7,7 +7,7 @@
     "test": "jest",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack --mode development --watch *.js",
+    "start": "webpack serve --mode=development dist --open",
     "test-watch": "jest --watch *.js"
   },
   "repository": {
@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/Ceejayski/JS-Phaser-Game#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.14.2",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.0.1",
     "css-loader": "^5.2.1",
     "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -35,14 +37,14 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.19.0",
+    "ts-jest": "^27.0.1",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0",
-    "@babel/preset-env": "^7.14.2",
-    "babel-jest": "^27.0.1",
-    "ts-jest": "^27.0.1"
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "phaser": "^3.55.2"
   },
   "jest": {
     "resetMocks": false,
