@@ -80,6 +80,8 @@ export default class GameScene extends Phaser.Scene {
       child.body.setMaxSpeed(100);
       child.body.immovable = true;
       const me = this;
+
+      // eslint-disable-next-line func-names
       child.update = function () {
         if (this.y > 600) {
           this.y = 0;
