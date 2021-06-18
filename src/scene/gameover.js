@@ -20,7 +20,7 @@ export default class GameOver extends Phaser.Scene {
       .on('pointerdown', () => {
         this.scene.start('game');
       });
-    
+
     // Menu Button
     const menu = this.add.image(this.scale.width * 0.5, this.scale.height * 0.8, 'menu').setScale(0.5);
     menu.setInteractive({ useHandCursor: true })

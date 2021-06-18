@@ -27,20 +27,3 @@ export const postScores = (user, score, url) => fetch(url,
     body: JSON.stringify({ user, score }),
   })
   .then(handleErrors);
-
-function ranker(arr) {
-  const array = arr.sort((a, b) => parseFloat(a.score) - parseFloat(b.score));
-  const rankArr = [{ rank: 1, user: array[0] }];
-  let count = 0;
-  for (let i = 1; i < array.length; i++) {
-    if (array[i].score === array[i - 1].score) {
-      const rank = i - count;
-      rankArr[i] = { rank, user: array[i] };
-      count += 1;
-    } else {
-      count = 0;
-      rankArr[i] = { rank: i + 1, user: array[i] };
-    }
-  }
-  return rankArr;
-}

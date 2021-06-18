@@ -25,7 +25,7 @@ export default class LeaderBoardScene extends Phaser.Scene {
       .catch(() => {
         this.add.text(this.scale.width * 0.5, this.scale.height * 0.5, 'Network Error. Please try again later.').setOrigin();
       });
-      const menu = this.add.image(this.scale.width * 0.5, this.scale.height * 0.8, 'menu').setScale(0.5);
+    const menu = this.add.image(this.scale.width * 0.5, this.scale.height * 0.8, 'menu').setScale(0.5);
     menu.setInteractive({ useHandCursor: true })
       .on('pointerdown', () => {
         this.scene.start('menu');
