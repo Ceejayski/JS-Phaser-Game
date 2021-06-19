@@ -29,24 +29,26 @@ export default class GameOver extends Phaser.Scene {
       });
 
     // Submit button
-    const form = document.createElement('form');
-    form.innerHTML = `
-    <div class="input-group">
-      <input type="text" name="name" class="form-control" placeholder="Enter your name" required minLength="4" maxLength="16" autofocus/>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-    `;
-    this.add.dom(this.scale.width * 0.5, this.scale.height * 0.6, form);
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const user = document.querySelector('input[name="name"]').value;
-      postScores(user, this.endScore, url)
-        .then(() => {
-          this.scene.start('leaderboard');
-        })
-        .catch(() => {
-          this.add.text(this.scale.width * 0.5, this.scale.height * 0.8, 'Network Error. Please try again later.').setOrigin();
-        });
-    });
+    if (this.endScore !== 0) {
+      const form = document.createElement('form');
+      form.innerHTML = `
+      <div class="input-group">
+        <input type="text" name="name" class="form-control" placeholder="Enter your name" required minLength="4" maxLength="16" autofocus/>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      `;
+      this.add.dom(this.scale.width * 0.5, this.scale.height * 0.6, form);
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const user = document.querySelector('input[name="name"]').value;
+        postScores(user, this.endScore, url)
+          .then(() => {
+            this.scene.start('leaderboard');
+          })
+          .catch(() => {
+            this.add.text(this.scale.width * 0.5, this.scale.height * 0.8, 'Network Error. Please try again later.').setOrigin();
+          });
+      });
+    }
   }
 }
